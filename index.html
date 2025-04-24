@@ -2,33 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Code Unlock Video</title>
+  <title>My Love</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-    #videoContainer { display: none; margin-top: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: pink;
+    }
+    #videoContainer {
+      display: none;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Enter Code to Watch the Video</h1>
+  <h1>Enter the code jenjen</h1>
   <input type="text" id="codeInput" placeholder="Enter code here">
   <button onclick="checkCode()">Submit</button>
 
-  <div id="videoContainer">
-    <video id="secretVideo" width="600" controls>
-      <source src="your-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+ <div id="videoContainer">
+  <div class="video-container">
+    <iframe width="600" height="400" 
+            src="https://www.youtube.com/embed/yKgp0VtWONE?list=PL3oAZ-BXo4w0JNKiqRpph7SFfVC1QevGF" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
   </div>
+</div>
+
 
   <script>
     function checkCode() {
-      const correctCode = "secret123";
+      const correctCode = "0411";
       const userInput = document.getElementById("codeInput").value;
 
       if (userInput === correctCode) {
         document.getElementById("videoContainer").style.display = "block";
-        document.getElementById("secretVideo").play();
       } else {
         alert("Incorrect code. Try again!");
       }
