@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Unlock Video</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    #videoContainer { display: none; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>Enter Code to Watch the Video</h1>
+  <input type="text" id="codeInput" placeholder="Enter code here">
+  <button onclick="checkCode()">Submit</button>
+
+  <div id="videoContainer">
+    <video id="secretVideo" width="600" controls>
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    function checkCode() {
+      const correctCode = "secret123";
+      const userInput = document.getElementById("codeInput").value;
+
+      if (userInput === correctCode) {
+        document.getElementById("videoContainer").style.display = "block";
+        document.getElementById("secretVideo").play();
+      } else {
+        alert("Incorrect code. Try again!");
+      }
+    }
+  </script>
+
+</body>
+</html>
